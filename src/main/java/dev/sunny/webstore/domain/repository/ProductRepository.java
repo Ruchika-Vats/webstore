@@ -4,7 +4,7 @@ import java.util.List;
 
 import dev.sunny.webstore.domain.Product;
 
-@FunctionalInterface
 public interface ProductRepository {
 	List<Product> getAllProducts();
+	void updateStock(String productId, long noOfUnits);
 }
