@@ -10,7 +10,7 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
     </head>
     <body>
-        <section class="container-fluid mx-auto bg-dark p-5">
+        <section class="container-fluid bg-dark mx-auto p-5">
             <div class="text-white">
                 <h1 class="h1">Products</h1>
                 <p class="lead">List of all available products in store.</p>
@@ -18,17 +18,18 @@
         </section>
         
         <section class="container-fluid mx-auto p-5">
-            <div class="text-white">
-                <div class="col-sm-6 col-md-3" style="padding-bottom: 15px">
-                    <div class="card">
-                        <img class="card-image-top" alt="iPhoneXR Image" src="https://i5.walmartimages.com/seo/Restored-Apple-iPhone-XR-64GB-Unlocked-GSM-Phone-w-12MP-Camera-Black-Refurbished_7d629ff5-52a2-4f66-aa81-6fdb3751deb2_1.f5cc064acd57e0d19837bc2cd823a32f.jpeg?odnHeight=117&odnWidth=117&odnBg=FFFFFF">
-                        <div class="card-body bg-grey">
-                            <h3 class="card-title">${product.name}</h3>
-                            <p class="card-text">${product.description}</p>
-                            <p class="card-text">USD ${product.unitPrice}</p>
-                            <p class="card-text">Available ${product.unitsInStock} units in stock.</p>
-                        </div>
-                    </div>
+            <div class="row">
+                <div class="card-group">
+	            <c:forEach items="${products}" var="product">
+	                <div class="card">
+	                    <div class="card-body">
+	                        <h3 class="card-title">${product.name}</h3>
+	                        <p class="card-text">${product.description}</p>
+	                        <p class="card-text">USD ${product.unitPrice}</p>
+	                        <p class="card-text">Available ${product.unitsInStock} units in stock.</p>
+	                    </div>
+	                </div>
+	            </c:forEach>
                 </div>
             </div>
         </section>
