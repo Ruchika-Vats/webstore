@@ -4,7 +4,6 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Products</title>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
@@ -19,18 +18,20 @@
         
         <section class="container-fluid mx-auto p-5">
             <div class="row">
-                <div class="card-group">
 	            <c:forEach items="${products}" var="product">
-	                <div class="card">
+                <div class="col">
+	                <div class="card border-primary h-100">
 	                    <div class="card-body">
 	                        <h3 class="card-title">${product.name}</h3>
 	                        <p class="card-text">${product.description}</p>
+	                    </div>
+                        <div class="card-footer">
 	                        <p class="card-text">USD ${product.unitPrice}</p>
 	                        <p class="card-text">Available ${product.unitsInStock} units in stock.</p>
-	                    </div>
+                        </div>
 	                </div>
-	            </c:forEach>
                 </div>
+	            </c:forEach>
             </div>
         </section>
     </body>
