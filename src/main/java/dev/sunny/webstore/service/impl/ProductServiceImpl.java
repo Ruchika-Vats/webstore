@@ -24,4 +24,9 @@ public class ProductServiceImpl implements ProductService {
 			.forEach(product -> productRepository.updateStock(product.getProductId(), product.getUnitsInStock() + 1000));
 	}
 
+	@Override
+	public List<Product> getAllProducts() {
+		return productRepository.getAllProducts();
+	}
+	
 }

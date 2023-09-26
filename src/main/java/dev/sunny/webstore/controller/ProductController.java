@@ -6,14 +6,10 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import dev.sunny.webstore.domain.repository.ProductRepository;
 import dev.sunny.webstore.service.ProductService;
 
 @Controller
 public class ProductController {
-	
-	@Autowired
-	private ProductRepository productRepository;
 	
 	@Autowired
 	private ProductService productService;
@@ -21,7 +17,7 @@ public class ProductController {
 	@RequestMapping(method = RequestMethod.GET, value = "/products")
 	public String listProducts(Model model) {
 		
-		model.addAttribute("products", productRepository.getAllProducts());
+		model.addAttribute("products", productService.getAllProducts());
 		return "products";
 	}
 	
