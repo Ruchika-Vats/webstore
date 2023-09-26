@@ -27,3 +27,24 @@ INSERT INTO products VALUES(
     'Tablet', 
     'New', 1000, 0, false
 );
+
+INSERT INTO customers VALUES (
+    'C0001', 
+    'Sunny Vats', 
+    'RZ-C/13, Shiv Main Market, New Delhi', 
+    25
+);
+
+INSERT INTO customers VALUES (
+    'C0002', 
+    'Sagar Vats', 
+    'RZ-C/13, Shiv Main Market, New Delhi', 
+    43
+);
+
+INSERT INTO customers VALUES (
+    'C0003', 
+    'Ruchika', 
+    'RZ-C/13, Shiv Main Market, New Delhi', 
+    8
+);

@@ -11,7 +11,7 @@
     <body>
         <section class="container-fluid bg-dark mx-auto p-5">
             <div class="text-white">
-                <h1 class="h1">Products</h1>
+                <h1 class="display-1">Products</h1>
                 <p class="lead">List of all available products in store.</p>
             </div>
         </section>
