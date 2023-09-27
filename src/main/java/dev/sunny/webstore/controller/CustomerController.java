@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import dev.sunny.webstore.service.CustomerService;
 
 @Controller
+@RequestMapping("market")
 public class CustomerController {
 	
 	@Autowired
